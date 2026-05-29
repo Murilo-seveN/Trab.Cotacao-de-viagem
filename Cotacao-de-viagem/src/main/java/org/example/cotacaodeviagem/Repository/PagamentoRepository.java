@@ -1,3 +1,3 @@
 @Repository
-public interface PagamentoRepository extends JpaRepository<Pagamento, Long> {
+public interface PagamentoRepository extends JpaRepository<pagamentoEntity, Long> {
 }

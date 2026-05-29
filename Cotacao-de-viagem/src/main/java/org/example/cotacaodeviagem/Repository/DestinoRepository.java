@@ -1,3 +1,3 @@
 @Repository
-public interface DestinoRepository extends JpaRepository<Destino, Long> {
+public interface DestinoRepository extends JpaRepository<destinoEntity, Long> {
 }
