@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8669e6e0-9996-4abb-9dd4-221ea353be98" name="Changes" comment="a" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dinossaury&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Murilo-seveN/Trab.Cotacao-de-viagem.git&quot;,
+    &quot;accountId&quot;: &quot;01ade718-22e5-4af2-8970-cf1a708ac6a6&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3DxsUlw5b1gwSVg26LA0opKTUpH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Desktop\trabalho de java\Trab.Cotacao-de-viagem\Cotacao-de-viagem\src\main\java\org\example\cotacaodeviagem" />
+      <recent name="C:\Users\PC\Desktop\trabalho de java\Trab.Cotacao-de-viagem\Cotacao-de-viagem\src\main\java\org\example\DTO" />
+      <recent name="C:\Users\PC\Desktop\trabalho de java\Trab.Cotacao-de-viagem\Cotacao-de-viagem\src\main\java\org\example\Repository" />
+      <recent name="C:\Users\PC\Desktop\trabalho de java\Trab.Cotacao-de-viagem\Cotacao-de-viagem\src\main\java\org\example\Entity" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8669e6e0-9996-4abb-9dd4-221ea353be98" name="Changes" comment="" />
+      <created>1779235073093</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1779235073093</updated>
+      <workItem from="1779235074245" duration="1666000" />
+      <workItem from="1779238099096" duration="398000" />
+      <workItem from="1780014512588" duration="1362000" />
+      <workItem from="1780015885025" duration="299000" />
+    </task>
+    <task id="LOCAL-00001" summary="Destino e Pagamento">
+      <option name="closed" value="true" />
+      <created>1779235920234</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779235920235</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Destino e Pagamento 1">
+      <option name="closed" value="true" />
+      <created>1779238487102</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779238487102</updated>
+    </task>
+    <task id="LOCAL-00003" summary="a">
+      <option name="closed" value="true" />
+      <created>1780015989453</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1780015989453</updated>
+    </task>
+    <task id="LOCAL-00004" summary="a">
+      <option name="closed" value="true" />
+      <created>1780016157078</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1780016157078</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Destino e Pagamento" />
+    <MESSAGE value="Destino e Pagamento 1" />
+    <MESSAGE value="a" />
+    <option name="LAST_COMMIT_MESSAGE" value="a" />
+  </component>
+</project>
