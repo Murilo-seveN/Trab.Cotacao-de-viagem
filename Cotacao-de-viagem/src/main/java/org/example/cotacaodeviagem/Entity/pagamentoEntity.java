@@ -1,6 +1,6 @@
 @Entity
 @Table(name = "pagamentos")
-public class Pagamento {
+public class pagamentoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
