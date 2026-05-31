@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<clienteEntity, Long> {
+public interface clienteRepository extends JpaRepository<clienteEntity, Long> {
     Optional<Cliente> findByEmail(String email);
 }
