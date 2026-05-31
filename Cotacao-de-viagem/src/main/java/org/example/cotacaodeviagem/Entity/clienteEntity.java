@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 
+@SpringBootAplication
 @Entity
 @Table(name = "tb_clientes")
 @Data
