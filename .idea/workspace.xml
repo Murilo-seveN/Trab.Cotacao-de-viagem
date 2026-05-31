@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8669e6e0-9996-4abb-9dd4-221ea353be98" name="Changes" comment="a">
+    <list default="true" id="8669e6e0-9996-4abb-9dd4-221ea353be98" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Entity/Destino.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Entity/destinoEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Entity/Pagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Entity/pagamentoEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Repository/DestinoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Repository/DestinoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Repository/PagamentoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Repository/PagamentoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Repository/clienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Repository/clienteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Entity/clienteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Entity/clienteEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +25,69 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Murilo-seveN/Trab.Cotacao-de-viagem.git&quot;,
-    &quot;accountId&quot;: &quot;01ade718-22e5-4af2-8970-cf1a708ac6a6&quot;
+    &quot;url&quot;: &quot;https://github.com/Murilo-seveN/Trab.Cotacao-de-viagem&quot;,
+    &quot;accountId&quot;: &quot;a589941d-c75b-4afe-9f3d-62e223470e05&quot;
   }
 }</component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000000000000007" />
+      <entry key="MS500" value="1.0009238844468602" />
+      <entry key="S2" value="1.1766060331169692" />
+      <entry key="S5" value="1.5847092009363068" />
+      <entry key="S10" value="2.0009092152294934" />
+      <entry key="S30" value="2.556382746202294" />
+      <entry key="S60" value="2.7671791686102045" />
+      <entry key="M2" value="2.9873886606672295" />
+      <entry key="M5" value="3.566685766016105" />
+      <entry key="M10" value="4.081357171409109" />
+      <entry key="M15" value="4.329922997089591" />
+      <entry key="M30" value="4.632050849070774" />
+      <entry key="H1" value="4.8069265160805585" />
+      <entry key="H2" value="4.90106930985357" />
+      <entry key="H4" value="4.949920567485344" />
+      <entry key="D1" value="4.991566780070234" />
+      <entry key="W1" value="4.998793114368203" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.9206152917036404E-6" />
+      <entry key="MS500" value="0.07189366716809208" />
+      <entry key="S2" value="0.5441511161655674" />
+      <entry key="S5" value="1.0574653647565453" />
+      <entry key="S10" value="1.5984490117796926" />
+      <entry key="S30" value="2.3630259345242597" />
+      <entry key="S60" value="2.6596746676607865" />
+      <entry key="M2" value="2.928943582437684" />
+      <entry key="M5" value="3.53914036045558" />
+      <entry key="M10" value="4.065778303805834" />
+      <entry key="M15" value="4.318956436165714" />
+      <entry key="M30" value="4.626214599132929" />
+      <entry key="H1" value="4.803906189355738" />
+      <entry key="H2" value="4.899531627332689" />
+      <entry key="H4" value="4.949144584907494" />
+      <entry key="D1" value="4.991436434837505" />
+      <entry key="W1" value="4.998774468463819" />
+    </decayedShown>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
   &quot;fromUser&quot;: false
@@ -42,20 +100,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Desktop\trabalho de java\Trab.Cotacao-de-viagem\Cotacao-de-viagem\src\main\java\org\example\cotacaodeviagem" />
@@ -64,6 +128,24 @@
       <recent name="C:\Users\PC\Desktop\trabalho de java\Trab.Cotacao-de-viagem\Cotacao-de-viagem\src\main\java\org\example\cotacaodeviagem\Entity" />
       <recent name="C:\Users\PC\Desktop\trabalho de java\Trab.Cotacao-de-viagem\Cotacao-de-viagem\src\main\java\org\example\DTO" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="clienteEntity" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-26" />
+      <module name="CotacaodeViagem" />
+      <option name="SPRING_BOOT_MAIN_CLASS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -76,6 +158,8 @@
       <workItem from="1779238099096" duration="398000" />
       <workItem from="1780014512588" duration="1362000" />
       <workItem from="1780015885025" duration="1165000" />
+      <workItem from="1780026060334" duration="71000" />
+      <workItem from="1780185789316" duration="4091000" />
     </task>
     <task id="LOCAL-00001" summary="Destino e Pagamento">
       <option name="closed" value="true" />
@@ -141,7 +225,23 @@
       <option name="project" value="LOCAL" />
       <updated>1780016549726</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update">
+      <option name="closed" value="true" />
+      <created>1780197150011</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1780197150012</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update">
+      <option name="closed" value="true" />
+      <created>1780197275616</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1780197275616</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +262,7 @@
     <MESSAGE value="Destino e Pagamento" />
     <MESSAGE value="Destino e Pagamento 1" />
     <MESSAGE value="a" />
-    <option name="LAST_COMMIT_MESSAGE" value="a" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
