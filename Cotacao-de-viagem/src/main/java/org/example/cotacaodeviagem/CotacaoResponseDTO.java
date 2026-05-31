@@ -1,6 +1,7 @@
-package org.example.cotacao;
+package com.example.trabalhocotacao;
 
-public class Cotacao {
+public class CotacaoResponseDTO {
+
     private Long id;
     private Long clienteId;
     private Long destinoId;
@@ -9,7 +10,6 @@ public class Cotacao {
     private int numeroPessoas;
     private String status;
 
-    // Getters e Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

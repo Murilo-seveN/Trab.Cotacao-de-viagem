@@ -1,17 +1,12 @@
-package org.example.cotacao;
+package com.example.trabalhocotacao;
 
-public class Cotacao {
-    private Long id;
+public class CotacaoRequestDTO {
+
     private Long clienteId;
     private Long destinoId;
     private String dataViagem;
     private String dataRetorno;
     private int numeroPessoas;
-    private String status;
-
-    // Getters e Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
 
     public Long getClienteId() { return clienteId; }
     public void setClienteId(Long clienteId) { this.clienteId = clienteId; }
@@ -27,7 +22,4 @@ public class Cotacao {
 
     public int getNumeroPessoas() { return numeroPessoas; }
     public void setNumeroPessoas(int numeroPessoas) { this.numeroPessoas = numeroPessoas; }
-
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
 }
