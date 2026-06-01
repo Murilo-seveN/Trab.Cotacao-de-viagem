@@ -1,44 +1,44 @@
-package com.example.trabalhocotacao;
+package org.example.cotacaodeviagem.controller;
 
-import com.seuprojeto.cotacoes.dto.*;
-import com.seuprojeto.cotacoes.service.CotacaoService;
+import lombok.RequiredArgsConstructor;
+import org.example.cotacaodeviagem.dto.*;
+import org.example.cotacaodeviagem.service.CotacaoService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/cotacoes")
+@RequiredArgsConstructor
 public class CotacaoController {
 
     private final CotacaoService service;
 
-    public CotacaoController(CotacaoService service) {
-        this.service = service;
-    }
-
     @PostMapping
-    public CotacaoResponseDTO criar(@RequestBody CotacaoRequestDTO dto) {
-        return service.criar(dto);
+    public ResponseEntity<CotacaoResponseDTO> criar(@RequestBody CotacaoRequestDTO dto) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.criar(dto));
     }
 
     @GetMapping
-    public List<CotacaoResponseDTO> listar() {
-        return service.listar();
+    public ResponseEntity<List<CotacaoResponseDTO>> listar() {
+        return ResponseEntity.ok(service.listar());
     }
 
     @GetMapping("/{id}")
-    public CotacaoResponseDTO buscar(@PathVariable Long id) {
-        return service.buscarPorId(id);
+    public ResponseEntity<CotacaoResponseDTO> buscar(@PathVariable Long id) {
+        return ResponseEntity.ok(service.buscarPorId(id));
     }
 
     @PatchMapping("/{id}/status")
-    public CotacaoResponseDTO atualizarStatus(@PathVariable Long id, @RequestBody StatusUpdateDTO dto) {
-        return service.atualizarStatus(id, dto.getStatus());
+    public ResponseEntity<CotacaoResponseDTO> atualizarStatus(
+            @PathVariable Long id, @RequestBody CotacaoStatusDTO dto) {
+        return ResponseEntity.ok(service.atualizarStatus(id, dto.getStatus()));
     }
 
     @DeleteMapping("/{id}")
-    public String deletar(@PathVariable Long id) {
-        service.deletar(id);
-        return "Cotação removida com sucesso!";
+    public ResponseEntity<Void> remover(@PathVariable Long id) {
+        service.remover(id);
+        return ResponseEntity.noContent().build();
     }
 }
