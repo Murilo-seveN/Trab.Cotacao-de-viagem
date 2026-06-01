@@ -21,7 +21,8 @@ public class PagamentoService {
 
         PagamentoEntity e = new PagamentoEntity();
         e.setCotacao(cotacao);
-        e.setValorPago(dto.getValorPago());
+        // Garante que o valor pago seja exatamente o valor total calculado na cotação
+        e.setValorPago(cotacao.getValorTotal());
         e.setStatus("PENDENTE");
         e.setDataPagamento(LocalDateTime.now());
 
@@ -36,8 +37,18 @@ public class PagamentoService {
     public PagamentoResponseDTO atualizarStatus(Long id, String status) {
         PagamentoEntity e = pagamentoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Pagamento nao encontrado"));
+        
         e.setStatus(status);
-        return toResponse(pagamentoRepository.save(e));
+        PagamentoEntity salvo = pagamentoRepository.save(e);
+
+        // Se o pagamento for aprovado, atualiza também o status da cotação automaticamente
+        if ("PAGO".equalsIgnoreCase(status) || "APROVADO".equalsIgnoreCase(status)) {
+            CotacaoEntity cotacao = e.getCotacao();
+            cotacao.setStatus("PAGO");
+            cotacaoRepository.save(cotacao);
+        }
+
+        return toResponse(salvo);
     }
 
     public void remover(Long id) {
