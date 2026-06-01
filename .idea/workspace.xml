@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8669e6e0-9996-4abb-9dd4-221ea353be98" name="Changes" comment="a">
-      <change beforePath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Entity/pagamentoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cotacao-de-viagem/src/main/java/org/example/cotacaodeviagem/Entity/PagamentoEntity.java" afterDir="false" />
-    </list>
+    <list default="true" id="8669e6e0-9996-4abb-9dd4-221ea353be98" name="Changes" comment="a" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +71,8 @@
       <workItem from="1780255537835" duration="365000" />
       <workItem from="1780255904078" duration="808000" />
       <workItem from="1780280350897" duration="88000" />
-      <workItem from="1780280440184" duration="929000" />
+      <workItem from="1780280440184" duration="1255000" />
+      <workItem from="1780337130725" duration="47000" />
     </task>
     <task id="LOCAL-00001" summary="Destino e Pagamento">
       <option name="closed" value="true" />
@@ -179,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780281094533</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="a">
+      <option name="closed" value="true" />
+      <created>1780281515191</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1780281515191</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
