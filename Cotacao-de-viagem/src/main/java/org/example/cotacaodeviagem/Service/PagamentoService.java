@@ -6,6 +6,7 @@ import org.example.cotacaodeviagem.entity.*;
 import org.example.cotacaodeviagem.repository.*;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -41,6 +42,12 @@ public class PagamentoService {
 
     public void remover(Long id) {
         pagamentoRepository.deleteById(id);
+    }
+
+    public List<PagamentoResponseDTO> listar() {
+        return pagamentoRepository.findAll().stream()
+                .map(this::toResponse)
+                .collect(java.util.stream.Collectors.toList());
     }
 
     private PagamentoResponseDTO toResponse(PagamentoEntity e) {
