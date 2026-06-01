@@ -1,70 +1,77 @@
-package com.example.trabalhocotacao;
+package org.example.cotacaodeviagem.service;
 
-import com.seuprojeto.cotacoes.model.Cotacao;
-import com.seuprojeto.cotacoes.dto.*;
+import lombok.RequiredArgsConstructor;
+import org.example.cotacaodeviagem.dto.*;
+import org.example.cotacaodeviagem.entity.*;
+import org.example.cotacaodeviagem.repository.*;
 import org.springframework.stereotype.Service;
-
-import java.util.*;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class CotacaoService {
 
-    private Map<Long, Cotacao> banco = new HashMap<>();
-    private Long contadorId = 1L;
+    private final CotacaoRepository cotacaoRepository;
+    private final ClienteRepository clienteRepository;
+    private final DestinoRepository destinoRepository;
 
     public CotacaoResponseDTO criar(CotacaoRequestDTO dto) {
-        Cotacao c = new Cotacao();
+        ClienteEntity cliente = clienteRepository.findById(dto.getClienteId())
+            .orElseThrow(() -> new RuntimeException("Cliente nao encontrado"));
+        DestinoEntity destino = destinoRepository.findById(dto.getDestinoId())
+            .orElseThrow(() -> new RuntimeException("Destino nao encontrado"));
 
-        c.setId(contadorId++);
-        c.setClienteId(dto.getClienteId());
-        c.setDestinoId(dto.getDestinoId());
-        c.setDataViagem(dto.getDataViagem());
-        c.setDataRetorno(dto.getDataRetorno());
-        c.setNumeroPessoas(dto.getNumeroPessoas());
-        c.setStatus("PENDENTE");
+        BigDecimal valorTotal = destino.getPrecoPorPessoa()
+            .multiply(BigDecimal.valueOf(dto.getNumeroDePessoas()));
 
-        banco.put(c.getId(), c);
+        CotacaoEntity e = new CotacaoEntity();
+        e.setCliente(cliente);
+        e.setDestino(destino);
+        e.setDataCotacao(LocalDateTime.now());
+        e.setDataViagem(dto.getDataViagem());
+        e.setDataRetorno(dto.getDataRetorno());
+        e.setNumeroDePessoas(dto.getNumeroDePessoas());
+        e.setValorTotal(valorTotal);
+        e.setStatus("PENDENTE");
 
-        return toResponseDTO(c);
+        return toResponse(cotacaoRepository.save(e));
     }
 
     public List<CotacaoResponseDTO> listar() {
-        List<CotacaoResponseDTO> lista = new ArrayList<>();
-        for (Cotacao c : banco.values()) {
-            lista.add(toResponseDTO(c));
-        }
-        return lista;
+        return cotacaoRepository.findAll().stream()
+            .map(this::toResponse).collect(Collectors.toList());
     }
 
     public CotacaoResponseDTO buscarPorId(Long id) {
-        return toResponseDTO(banco.get(id));
+        return toResponse(cotacaoRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Cotacao nao encontrada")));
     }
 
     public CotacaoResponseDTO atualizarStatus(Long id, String status) {
-        Cotacao c = banco.get(id);
-        if (c != null) {
-            c.setStatus(status);
-        }
-        return toResponseDTO(c);
+        CotacaoEntity e = cotacaoRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Cotacao nao encontrada"));
+        e.setStatus(status);
+        return toResponse(cotacaoRepository.save(e));
     }
 
-    public void deletar(Long id) {
-        banco.remove(id);
+    public void remover(Long id) {
+        cotacaoRepository.deleteById(id);
     }
 
-    // Conversor
-    private CotacaoResponseDTO toResponseDTO(Cotacao c) {
-        if (c == null) return null;
-
+    private CotacaoResponseDTO toResponse(CotacaoEntity e) {
         CotacaoResponseDTO dto = new CotacaoResponseDTO();
-        dto.setId(c.getId());
-        dto.setClienteId(c.getClienteId());
-        dto.setDestinoId(c.getDestinoId());
-        dto.setDataViagem(c.getDataViagem());
-        dto.setDataRetorno(c.getDataRetorno());
-        dto.setNumeroPessoas(c.getNumeroPessoas());
-        dto.setStatus(c.getStatus());
-
+        dto.setId(e.getId());
+        dto.setClienteId(e.getCliente().getId());
+        dto.setDestinoId(e.getDestino().getId());
+        dto.setDataCotacao(e.getDataCotacao());
+        dto.setDataViagem(e.getDataViagem());
+        dto.setDataRetorno(e.getDataRetorno());
+        dto.setNumeroDePessoas(e.getNumeroDePessoas());
+        dto.setValorTotal(e.getValorTotal());
+        dto.setStatus(e.getStatus());
         return dto;
     }
 }
