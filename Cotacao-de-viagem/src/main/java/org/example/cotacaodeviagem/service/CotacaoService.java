@@ -21,6 +21,16 @@ public class CotacaoService {
     private final DescontoRepository descontoRepository;
 
     public CotacaoResponseDTO criar(CotacaoRequestDTO dto) {
+        // Validações básicas de segurança
+        if (dto.getNumeroDePessoas() <= 0) {
+            throw new RuntimeException("O numero de pessoas deve ser maior que zero");
+        }
+        if (dto.getDataViagem() != null && dto.getDataRetorno() != null) {
+            if (dto.getDataRetorno().isBefore(dto.getDataViagem())) {
+                throw new RuntimeException("A data de retorno nao pode ser anterior a data de viagem");
+            }
+        }
+
         ClienteEntity cliente = clienteRepository.findById(dto.getClienteId())
             .orElseThrow(() -> new RuntimeException("Cliente nao encontrado"));
         DestinoEntity destino = destinoRepository.findById(dto.getDestinoId())
