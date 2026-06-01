@@ -6,6 +6,7 @@ import org.example.cotacaodeviagem.service.PagamentoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/pagamentos")
@@ -18,6 +19,11 @@ public class PagamentoController {
     public ResponseEntity<PagamentoResponseDTO> registrar(
             @RequestBody PagamentoRequestDTO dto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.registrar(dto));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<PagamentoResponseDTO>> listar() {
+        return ResponseEntity.ok(service.listar());
     }
 
     @GetMapping("/{id}")
