@@ -6,6 +6,7 @@ import org.example.cotacaodeviagem.dto.DestinoResponseDTO;
 import org.example.cotacaodeviagem.entity.DestinoEntity;
 import org.example.cotacaodeviagem.repository.DestinoRepository;
 import org.springframework.stereotype.Service;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,6 +17,10 @@ public class DestinoService {
     private final DestinoRepository repository;
 
     public DestinoResponseDTO criar(DestinoRequestDTO dto) {
+        if (dto.getPrecoPorPessoa() == null || dto.getPrecoPorPessoa().compareTo(BigDecimal.ZERO) <= 0) {
+            throw new RuntimeException("O preco por pessoa deve ser maior que zero");
+        }
+
         DestinoEntity e = new DestinoEntity();
         e.setNome(dto.getNome());
         e.setDescricao(dto.getDescricao());
@@ -35,6 +40,10 @@ public class DestinoService {
     }
 
     public DestinoResponseDTO atualizar(Long id, DestinoRequestDTO dto) {
+        if (dto.getPrecoPorPessoa() == null || dto.getPrecoPorPessoa().compareTo(BigDecimal.ZERO) <= 0) {
+            throw new RuntimeException("O preco por pessoa deve ser maior que zero");
+        }
+
         DestinoEntity e = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Destino nao encontrado"));
         e.setNome(dto.getNome());
