@@ -1,9 +1,7 @@
-package com.example.trabalhocotacao;
+package org.example.cotacaodeviagem.dto;
+import lombok.Data;
 
-public class CotacaoStatusUpdtDTO{
-
+@Data
+public class CotacaoStatusDTO {
     private String status;
-
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
 }
