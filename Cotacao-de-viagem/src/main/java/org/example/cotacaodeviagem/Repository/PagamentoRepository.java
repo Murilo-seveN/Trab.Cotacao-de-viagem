@@ -1,3 +1,9 @@
+package org.example.cotacaodeviagem.repository;
+
+import org.example.cotacaodeviagem.entity.PagamentoEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 @Repository
-public interface PagamentoRepository extends JpaRepository<pagamentoEntity, Long> {
+public interface PagamentoRepository extends JpaRepository<PagamentoEntity, Long> {
 }
