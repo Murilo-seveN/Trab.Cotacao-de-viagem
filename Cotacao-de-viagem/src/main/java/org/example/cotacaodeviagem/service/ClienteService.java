@@ -16,6 +16,11 @@ public class ClienteService {
     private final ClienteRepository repository;
 
     public ClienteResponseDTO criar(ClienteRequestDTO dto) {
+        // Validação preventiva para não estourar o banco de dados
+        if (repository.findByEmail(dto.getEmail()).isPresent()) {
+            throw new RuntimeException("E-mail ja cadastrado no sistema!");
+        }
+
         ClienteEntity e = new ClienteEntity();
         e.setNome(dto.getNome());
         e.setEmail(dto.getEmail());
@@ -38,6 +43,14 @@ public class ClienteService {
     public ClienteResponseDTO atualizar(Long id, ClienteRequestDTO dto) {
         ClienteEntity e = repository.findById(id)
             .orElseThrow(() -> new RuntimeException("Cliente nao encontrado"));
+        
+        // Verifica se o novo e-mail já pertence a OUTRO cliente cadastrado
+        repository.findByEmail(dto.getEmail()).ifPresent(clienteExistente -> {
+            if (!clienteExistente.getId().equals(id)) {
+                throw new RuntimeException("E-mail ja cadastrado em outro cliente!");
+            }
+        });
+
         e.setNome(dto.getNome());
         e.setEmail(dto.getEmail());
         e.setTelefone(dto.getTelefone());
