@@ -1,11 +1,11 @@
 package org.example.cotacaodeviagem.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.cotacaodeviagem.dto.;
+import org.example.cotacaodeviagem.dto.*;
 import org.example.cotacaodeviagem.service.DescontoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
