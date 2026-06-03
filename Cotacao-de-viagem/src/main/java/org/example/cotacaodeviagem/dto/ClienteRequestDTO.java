@@ -1,4 +1,5 @@
 package org.example.cotacaodeviagem.dto;
+
 import lombok.Data;
 
 @Data
