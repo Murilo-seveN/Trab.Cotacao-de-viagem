@@ -21,7 +21,7 @@ public class CotacaoService {
     private final DescontoRepository descontoRepository;
 
     public CotacaoResponseDTO criar(CotacaoRequestDTO dto) {
-        // Validações básicas de segurança
+
         if (dto.getNumeroDePessoas() <= 0) {
             throw new RuntimeException("O numero de pessoas deve ser maior que zero");
         }
@@ -39,13 +39,13 @@ public class CotacaoService {
         BigDecimal valorBase = destino.getPrecoPorPessoa()
             .multiply(BigDecimal.valueOf(dto.getNumeroDePessoas()));
 
-        // Calcula número de dias da viagem
+
         long diasViagem = 0;
         if (dto.getDataViagem() != null && dto.getDataRetorno() != null) {
             diasViagem = ChronoUnit.DAYS.between(dto.getDataViagem(), dto.getDataRetorno());
         }
 
-        // Aplica desconto automático por período
+
         BigDecimal desconto = BigDecimal.ZERO;
         String descricaoDesconto = null;
 
@@ -71,7 +71,6 @@ public class CotacaoService {
 
         CotacaoEntity salva = cotacaoRepository.save(e);
 
-        // Registra o desconto automaticamente se aplicável
         if (desconto.compareTo(BigDecimal.ZERO) > 0) {
             DescontoEntity d = new DescontoEntity();
             d.setCotacao(salva);
