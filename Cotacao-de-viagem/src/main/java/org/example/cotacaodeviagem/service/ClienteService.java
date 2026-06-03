@@ -16,9 +16,13 @@ public class ClienteService {
     private final ClienteRepository repository;
 
     public ClienteResponseDTO criar(ClienteRequestDTO dto) {
-        // Validação preventiva para não estourar o banco de dados
+
         if (repository.findByEmail(dto.getEmail()).isPresent()) {
             throw new RuntimeException("E-mail ja cadastrado no sistema!");
+        }
+
+        if (repository.findByDocumento(dto.getDocumento()).isPresent()) {
+            throw new RuntimeException("Documento ja cadastrado no sistema!");
         }
 
         ClienteEntity e = new ClienteEntity();
@@ -31,23 +35,29 @@ public class ClienteService {
 
     public List<ClienteResponseDTO> listar() {
         return repository.findAll().stream()
-            .map(this::toResponse).collect(Collectors.toList());
+                .map(this::toResponse).collect(Collectors.toList());
     }
 
     public ClienteResponseDTO buscarPorEmail(String email) {
         ClienteEntity e = repository.findByEmail(email)
-            .orElseThrow(() -> new RuntimeException("Cliente nao encontrado"));
+                .orElseThrow(() -> new RuntimeException("Cliente nao encontrado"));
         return toResponse(e);
     }
 
     public ClienteResponseDTO atualizar(Long id, ClienteRequestDTO dto) {
         ClienteEntity e = repository.findById(id)
-            .orElseThrow(() -> new RuntimeException("Cliente nao encontrado"));
-        
-        // Verifica se o novo e-mail já pertence a OUTRO cliente cadastrado
+                .orElseThrow(() -> new RuntimeException("Cliente nao encontrado"));
+
+
         repository.findByEmail(dto.getEmail()).ifPresent(clienteExistente -> {
             if (!clienteExistente.getId().equals(id)) {
                 throw new RuntimeException("E-mail ja cadastrado em outro cliente!");
+            }
+        });
+
+        repository.findByDocumento(dto.getDocumento()).ifPresent(clienteExistente -> {
+            if (!clienteExistente.getId().equals(id)) {
+                throw new RuntimeException("Documento ja cadastrado em outro cliente!");
             }
         });
 
