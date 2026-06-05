@@ -21,7 +21,6 @@ public class PagamentoService {
 
         PagamentoEntity e = new PagamentoEntity();
         e.setCotacao(cotacao);
-        // Garante que o valor pago seja exatamente o valor total calculado na cotação
         e.setValorPago(cotacao.getValorTotal());
         e.setStatus("PENDENTE");
         e.setDataPagamento(LocalDateTime.now());
@@ -41,7 +40,6 @@ public class PagamentoService {
         e.setStatus(status);
         PagamentoEntity salvo = pagamentoRepository.save(e);
 
-        // Se o pagamento for aprovado, atualiza também o status da cotação automaticamente
         if ("PAGO".equalsIgnoreCase(status) || "APROVADO".equalsIgnoreCase(status)) {
             CotacaoEntity cotacao = e.getCotacao();
             cotacao.setStatus("PAGO");
